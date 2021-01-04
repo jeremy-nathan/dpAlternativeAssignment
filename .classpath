@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Contact-Management-System-original4/Contact-Management-System-original/Contact-Management-System-master/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="Contact-Management-System-original4/Contact-Management-System-original/Contact-Management-System-master/swingx/ContactManagementSystem1.jar"/>
+	<classpathentry kind="lib" path="Contact-Management-System-original4/Contact-Management-System-original/Contact-Management-System-master/swingx/swingx-all-1.6.4.jar"/>
+	<classpathentry kind="lib" path="Contact-Management-System-original4/Contact-Management-System-original/Contact-Management-System-master/lib/javax.mail.jar"/>
+	<classpathentry kind="lib" path="Contact-Management-System-original4/Contact-Management-System-original/Contact-Management-System-master/lib/activation.jar"/>
+	<classpathentry kind="output" path="Contact-Management-System-original4/Contact-Management-System-original/Contact-Management-System-master/build/classes"/>
+</classpath>
