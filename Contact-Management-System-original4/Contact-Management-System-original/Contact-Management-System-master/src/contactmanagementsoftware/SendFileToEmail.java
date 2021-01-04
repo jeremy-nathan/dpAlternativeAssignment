@@ -31,8 +31,8 @@ public class SendFileToEmail {
 		//use gmail account only because I use gmail smtp.
 		//to use this feature, go to your settings in google account > security > 
 		//Less secure app access > ON (off it after you're done!)
-		String from = "vonne.lavonne@gmail.com"; //change to your own email 
-		String password = "mikikurenai98"; //change to your own password
+		String from = "your email"; //change to your own email 
+		String password = "your password"; //change to your own password
 
 		//Get the session object  
 		Properties props = System.getProperties(); 
