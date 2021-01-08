@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -15,17 +16,16 @@ public class AddContact {
 	
 	MUI mui;
 	public AddContact() {
-		add();
 	}
 
 	public void add() {
 
 		mui = MUI.getInstance();
-
 		mui.setDFlag(true);
+		JList jlist1 = mui.getJList1();
 		
 		ArrayList<ArrayList<Acquaintances>> a = mui.getA();
-		int x = mui.getX();
+		int x = jlist1.getSelectedIndex();
 		int num = mui.getNum();
 		boolean flag = mui.getFlag();
 		
@@ -55,6 +55,7 @@ public class AddContact {
 		}
 		
 		String One,Two,Three;
+		
 		switch(x){
 		case 0: //perF
 			One = one.getText();
@@ -76,17 +77,19 @@ public class AddContact {
 				return;
 			}
 			PersonalFriends perF;
-			if(flag)
+			if(flag) {
 				perF = new PersonalFriends();
-			else
+			}	
+			else {
 				perF = (PersonalFriends)a.get(x).get(num);
+			}
 			perF.setName(Name);
 			perF.setMobileNo(Mobile);
 			perF.setEmail(Email);
 			perF.setEvents(One);
 			perF.setAContext(Two);
 			perF.setADate(Three);
-			if(flag)
+			if(flag) 
 				a.get(x).add(perF);
 			//this.a.get(x).add(perF);
 			break;

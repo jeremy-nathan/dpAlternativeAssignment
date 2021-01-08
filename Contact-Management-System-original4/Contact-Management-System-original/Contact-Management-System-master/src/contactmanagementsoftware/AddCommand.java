@@ -31,7 +31,7 @@ public class AddCommand implements Command {
 			JOptionPane.showMessageDialog(mui, "Select a category!");
 			return;
 		}
-
+		
 		jPanel1.setVisible(false);
 		jPanel3.setVisible(true);
 		mui.setX(index);

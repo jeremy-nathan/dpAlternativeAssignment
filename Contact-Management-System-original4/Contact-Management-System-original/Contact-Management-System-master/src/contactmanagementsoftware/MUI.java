@@ -79,7 +79,7 @@ public class MUI extends javax.swing.JFrame {
 			op = "Edit";
 		if(!flag){
 			jButton10.setText("Save");
-			Acquaintances e = a.get(x).get(num);            
+			Acquaintances e = a.get(x).get(num);          
 			name.setText(e.getName());
 			mobile.setText(e.getMobileNo());
 			email.setText(e.getEmail());
