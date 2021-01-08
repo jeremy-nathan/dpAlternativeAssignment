@@ -3,10 +3,13 @@ package contactmanagementsoftware;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
+
 public class ButtonController implements ActionListener {
 
+	MUI mui;
+	
 	ButtonController() {
-
 	}
 
 	@Override
@@ -14,48 +17,50 @@ public class ButtonController implements ActionListener {
 		Invoker invoker = new Invoker();
 		Command command = null;
 
-		if(e.getActionCommand().equals("Add")) {
+		mui = MUI.getInstance();
+		
+		if(e.getSource() == mui.getjButton1()) {
 			command = new AddCommand();
 		}
 
-		else if(e.getActionCommand().equals("Delete")) {
+		else if(e.getSource() == mui.getjButton2()) {
 			command = new DeleteCommand();
 		}
 
-		else if(e.getActionCommand().equals("Search")) {
+		else if(e.getSource() == mui.getjButton3()) {
 			command = new SearchCommand();
 		}
 
-		else if(e.getActionCommand().equals("Exit")) {
+		else if(e.getSource() == mui.getjButton4()) {
 			command = new ExitCommand();
 		}
 
-		else if(e.getActionCommand().equals("Edit")) {
+		else if(e.getSource() == mui.getjButton5()) {
 			command = new EditCommand();
 		}
 
-		else if(e.getActionCommand().equals("View full detail")) {
+		else if(e.getSource() == mui.getjButton6()) {
 			command = new VFDCommand();
 		}
 
-		else if(e.getActionCommand().equals("Read from file")) {
+		else if(e.getSource() == mui.getjButton7()) {
 			command = new ReadFromFileCommand();
 		}
 
 		//Command for save as file
-		else if(e.getActionCommand().equals("Save as file")) {
+		else if(e.getSource() == mui.getjButton8()) {
 			command = new SaveCommand();
 		}
 
-		else if(e.getActionCommand().equals("Back to main menu")) {
+		else if(e.getSource() == mui.getjButton9()) {
 			command = new BackToMainMenuCommand();
 		}
 
-		else if(e.getActionCommand().equals("Add contact")) {
+		else if(e.getSource() == mui.getjButton10()) {
 			command = new AddContactCommand();
 		}
 
-		else if(e.getActionCommand().equals("Cancel")) {
+		else if(e.getSource() == mui.getjButton11()) {
 			command = new CancelCommand();
 		}
 

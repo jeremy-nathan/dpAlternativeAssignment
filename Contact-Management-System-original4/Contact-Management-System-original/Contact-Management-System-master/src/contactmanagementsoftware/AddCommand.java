@@ -9,9 +9,6 @@ import java.util.regex.Pattern;
 
 import javax.swing.*;
 
-import contactmanagementsoftware.Receiver.AddContact;
-import contactmanagementsoftware.Receiver.Search;
-
 //Done by evefaustina
 //improvement: some method (the 2 last one are put in the add class instead, reduce decouple with mui
 
@@ -184,11 +181,13 @@ class ReadFromFileCommand implements Command {
 		int result = fileChooser.showOpenDialog(mui);
 		if (result == JFileChooser.APPROVE_OPTION) {
 			File selectedFile = fileChooser.getSelectedFile();
+			System.out.println("Selected file: "+selectedFile.getName());
 			try {
 				temp = (ArrayList<ArrayList<Acquaintances>>)SerializationUtil.deserialize(selectedFile);
 			}
 			catch (ClassNotFoundException | IOException ex) {
 				JOptionPane.showMessageDialog(mui, "Error");
+				System.out.println("Error: "+ex);
 				return;
 			}
 		}

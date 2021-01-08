@@ -268,7 +268,7 @@ public class MUI extends javax.swing.JFrame {
 		jButton7.setText("Read from file");
 		jButton8.setText("Save as file");
 		jButton9.setText("Back to main menu");
-		jButton10.setText("Add contact"); //TODO: nanti edit balik dapat add
+		jButton10.setText("Add"); //TODO: nanti edit balik dapat add
 		jButton11.setText("Cancel");
 
 		ButtonController listener = new ButtonController();
@@ -568,32 +568,6 @@ public class MUI extends javax.swing.JFrame {
 		// TODO add your handling code here:
 	}//GEN-LAST:event_nameActionPerformed
 
-//	public boolean MobileNoChecker(String str){
-//		int x;
-//		if(str.isEmpty() || str.length() < 6 || str.length() > 15)
-//			return false;
-//		for(int j = 0 ; j < str.length() ; j++)
-//		{
-//			x = (int)str.charAt(j);
-//			if( x < 48 || x > 57 )
-//				return false;    
-//		}
-//		return true;
-//	}
-
-//	public boolean validDate(String Date){
-//		String pattern = "[0-3][0-9]/[0-1][0-9]/[0-9]{4}";
-//		Pattern r = Pattern.compile(pattern);
-//		Matcher m = r.matcher(Date);
-//		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-//		if(!m.find()){
-//			JOptionPane.showMessageDialog(mg, "Enter a valid date");
-//			return false;
-//		}
-//		else
-//			return true;
-//	}
-
 	private void emailButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
 		String s = (String)JOptionPane.showInputDialog(
 				mg,
@@ -693,6 +667,54 @@ public class MUI extends javax.swing.JFrame {
 	
 	public JTextArea getThree() {
 		return three;
+	}
+	
+	public JButton getJButton1() {
+		return jButton1;
+	}
+	
+	public javax.swing.JButton getjButton1() {
+		return jButton1;
+	}
+
+	public javax.swing.JButton getjButton10() {
+		return jButton10;
+	}
+
+	public javax.swing.JButton getjButton11() {
+		return jButton11;
+	}
+
+	public javax.swing.JButton getjButton2() {
+		return jButton2;
+	}
+
+	public javax.swing.JButton getjButton3() {
+		return jButton3;
+	}
+
+	public javax.swing.JButton getjButton4() {
+		return jButton4;
+	}
+
+	public javax.swing.JButton getjButton5() {
+		return jButton5;
+	}
+
+	public javax.swing.JButton getjButton6() {
+		return jButton6;
+	}
+
+	public javax.swing.JButton getjButton7() {
+		return jButton7;
+	}
+
+	public javax.swing.JButton getjButton8() {
+		return jButton8;
+	}
+
+	public javax.swing.JButton getjButton9() {
+		return jButton9;
 	}
 
 	/**

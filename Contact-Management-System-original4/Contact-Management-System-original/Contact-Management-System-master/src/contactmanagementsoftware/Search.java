@@ -1,15 +1,8 @@
-package contactmanagementsoftware.Receiver;
+package contactmanagementsoftware;
 
 import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
-
-import contactmanagementsoftware.Acquaintances;
-import contactmanagementsoftware.CasualAcquaintances;
-import contactmanagementsoftware.MUI;
-import contactmanagementsoftware.PersonalFriends;
-import contactmanagementsoftware.ProfessionalFriends;
-import contactmanagementsoftware.Relatives;
 
 public class Search {
 	

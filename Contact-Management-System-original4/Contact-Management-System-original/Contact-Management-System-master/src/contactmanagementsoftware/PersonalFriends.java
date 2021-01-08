@@ -11,7 +11,7 @@ public class PersonalFriends extends Acquaintances implements Serializable{
     private static Scanner reader = new Scanner(System.in);
     public static int numberPerF = 0;
     
-    public PersonalFriends(){
+    PersonalFriends(){
         numberPerF++;
     }
     

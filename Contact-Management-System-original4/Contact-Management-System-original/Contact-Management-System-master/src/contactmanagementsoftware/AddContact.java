@@ -1,4 +1,4 @@
-package contactmanagementsoftware.Receiver;
+package contactmanagementsoftware;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -8,13 +8,6 @@ import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-
-import contactmanagementsoftware.Acquaintances;
-import contactmanagementsoftware.CasualAcquaintances;
-import contactmanagementsoftware.MUI;
-import contactmanagementsoftware.PersonalFriends;
-import contactmanagementsoftware.ProfessionalFriends;
-import contactmanagementsoftware.Relatives;
 
 public class AddContact {
 
