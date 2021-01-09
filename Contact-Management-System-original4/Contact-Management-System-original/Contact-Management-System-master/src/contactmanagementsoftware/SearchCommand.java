@@ -4,7 +4,24 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
-public class Search {
+//Button3
+public class SearchCommand implements Command {
+
+	MUI mui;
+	Search search;
+
+	public SearchCommand(Search search) {
+		this.search = search;
+	}
+	
+	@Override
+	public void execute() {
+		search.search();
+	}
+	
+}
+
+class Search {
 	
 	MUI mui;
 	

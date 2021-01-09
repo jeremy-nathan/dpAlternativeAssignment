@@ -20,15 +20,18 @@ public class ButtonController implements ActionListener {
 		mui = MUI.getInstance();
 		
 		if(e.getSource() == mui.getjButton1()) {
-			command = new AddCommand();
+			Add add = new Add();
+			command = new AddCommand(add);
 		}
 
 		else if(e.getSource() == mui.getjButton2()) {
-			command = new DeleteCommand();
+			Delete del = new Delete();
+			command = new DeleteCommand(del);
 		}
 
 		else if(e.getSource() == mui.getjButton3()) {
-			command = new SearchCommand();
+			Search search = new Search();
+			command = new SearchCommand(search);
 		}
 
 		else if(e.getSource() == mui.getjButton4()) {
@@ -36,32 +39,39 @@ public class ButtonController implements ActionListener {
 		}
 
 		else if(e.getSource() == mui.getjButton5()) {
-			command = new EditCommand();
+			Edit edit = new Edit();
+			command = new EditCommand(edit);
 		}
 
 		else if(e.getSource() == mui.getjButton6()) {
-			command = new VFDCommand();
+			ViewFullDetail vfd = new ViewFullDetail();
+			command = new VFDCommand(vfd);
 		}
 
 		else if(e.getSource() == mui.getjButton7()) {
-			command = new ReadFromFileCommand();
+			ReadFromFile rff = new ReadFromFile();
+			command = new ReadFromFileCommand(rff);
 		}
 
 		//Command for save as file
 		else if(e.getSource() == mui.getjButton8()) {
-			command = new SaveCommand();
+			Save save = new Save();
+			command = new SaveCommand(save);
 		}
 
 		else if(e.getSource() == mui.getjButton9()) {
-			command = new BackToMainMenuCommand();
+			BackToMainMenu btmm = new BackToMainMenu();
+			command = new BackToMainMenuCommand(btmm);
 		}
 
 		else if(e.getSource() == mui.getjButton10()) {
-			command = new AddContactCommand();
+			AddContact addContact = new AddContact();
+			command = new AddContactCommand(addContact);
 		}
 
 		else if(e.getSource() == mui.getjButton11()) {
-			command = new CancelCommand();
+			Cancel cancel = new Cancel();
+			command = new CancelCommand(cancel);
 		}
 
 		invoker.setCommand(command);

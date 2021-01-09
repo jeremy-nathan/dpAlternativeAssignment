@@ -10,9 +10,23 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-public class AddContact {
+//Button 10
+public class AddContactCommand implements Command {
 
-	//improvements: constructors of acq changed to public
+	AddContact addContact;
+	
+	public AddContactCommand(AddContact addContact) {
+		this.addContact = addContact;
+	}
+
+	@Override
+	public void execute() {
+		addContact.add();
+	}
+
+}
+
+class AddContact {
 	
 	MUI mui;
 	public AddContact() {
@@ -210,3 +224,4 @@ public class AddContact {
 	}
 
 }
+
