@@ -14,7 +14,7 @@ import javax.swing.JApplet;
  */
 public class CLJApplet extends JApplet {
     
-    private static ArrayList<ArrayList<Acquaintances>> a = new ArrayList<>();
+  /*  private static ArrayList<ArrayList<Acquaintances>> a = new ArrayList<>();
     private static ArrayList<Acquaintances> perF1 = new ArrayList<>();
     private static ArrayList<Acquaintances> rel1 = new ArrayList<>();
     private static ArrayList<Acquaintances> proF1 = new ArrayList<>();
@@ -33,5 +33,5 @@ public class CLJApplet extends JApplet {
         this.setMinimumSize(mg.getContentPane().getSize());
         mg.setMg(mg);
         mg.setA(a);
-    }
+    }*/
 }

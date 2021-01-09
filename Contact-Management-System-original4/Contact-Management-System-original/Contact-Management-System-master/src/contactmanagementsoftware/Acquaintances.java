@@ -1,9 +1,10 @@
 package contactmanagementsoftware;
 
 import java.io.Serializable;
+import java.util.Iterator;
 import java.util.Scanner;
 
-public class Acquaintances implements Serializable{
+public abstract class Acquaintances extends ContactManagementComponent implements Serializable{
     private String Name;
     private String MobileNo;
     private String Email;
@@ -12,7 +13,30 @@ public class Acquaintances implements Serializable{
     Acquaintances(){
         number++;
     }
-        
+    
+    //ditambah
+   /* final void createAcquaintances(String name, String MobileNo, String Email){
+        setName(name);
+        setMobileNo(MobileNo);
+        setEmail(Email);
+        hook1();
+        hook2();
+        hook3();
+    } */
+    //end tambah
+    
+  /*  public void hook1(){
+        hasOne();
+    }
+    
+    void hook2(){
+        hasTwo();
+    }
+    void hook3(){
+        hasThree();
+       
+    } */
+    
     public String getName() {
         return Name;
     }
@@ -67,4 +91,25 @@ public class Acquaintances implements Serializable{
             this.setEmail(reader.next());
         }
     }
+    
+    public String printSearchResult(){
+        String s = "";
+         s = s.concat("Name: " + getName() + "<br>");
+         s = s.concat("Mobile No: " + getMobileNo() + "<br>");
+         s = s.concat("Email: " + getEmail() + "<br>");
+        return s;
+    }
+    
+    public Iterator<ContactManagementComponent> createIterator() {
+        return new NullIterator();
+    }
+    
+    //ditambah
+ /*   public abstract boolean hasOne();
+    public abstract void setOne(String one);
+    public abstract boolean hasTwo();
+    public abstract void setTwo(String two);
+    public abstract boolean hasThree();
+    public abstract void setThree(String three); */
+    //end tambah
 }

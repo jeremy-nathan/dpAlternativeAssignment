@@ -84,4 +84,56 @@ public class CasualAcquaintances extends Acquaintances implements Serializable{
             setOtherInfo(reader.nextLine());
         }
     }
+    
+    public String printSearchResult(){
+        String s = "";
+        s = s.concat(super.printSearchResult());
+        s = s.concat("First met location & time: " + getWhenWhere() + "<br>");
+        s = s.concat("First met circumstances: " + getCircumstances() + "<br>");
+         s = s.concat("Other useful information: " + getOtherInfo() + "<br>");
+
+        return s;
+    }
+    
+    public String matchName(String str){
+        String s = "";
+        if (getName().matches(str)){
+            s = s.concat(printSearchResult());
+        }
+        
+        return s;
+    }
+    
+    //ditambah
+    /*
+    @Override
+        public boolean hasOne() {
+        return true;
+        }
+    
+    @Override
+    public void setOne(String one) {
+    setWhenWhere(one);
+    }
+    
+    @Override
+    public boolean hasTwo() {
+    return true;
+    }
+    
+    @Override
+    public void setTwo(String two) {
+    setCircumstances(two);
+    }
+    
+    @Override
+    public boolean hasThree() {
+    return true;
+    }
+    
+    @Override
+    public void setThree(String three) {
+    setOtherInfo(three);
+    } 
+    //end tambah */
 }

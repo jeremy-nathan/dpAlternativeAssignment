@@ -47,7 +47,21 @@ class Search {
 	}
 	
 	public void runn(){
+            String s = "<html> <b>Search results:</b><br>Found!<br><br>Acquaintance Details: <br>";
+        SearchClient search = new SearchClient(mui.getA());
+        s = s.concat(search.printNameSearch(mui.getStr()));
+       
+        if(s.matches("<html> <b>Search results:</b><br>Found!<br><br>Acquaintance Details: <br>")){
+            s  = "<html>No result found</html>";
+        }
+        else{
+            s = s.concat("</html>");
+        }
+        mui.getDetails().setText(s);
+        
+            
 		
+            /*
 		ArrayList<ArrayList<Acquaintances>> a = mui.getA();
 		String str = mui.getStr();
 		
@@ -120,5 +134,6 @@ class Search {
 			s = s.concat("</html>");
 		}
 		mui.getDetails().setText(s);
+*/
 	}
 }

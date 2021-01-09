@@ -29,16 +29,18 @@ public class AddContactCommand implements Command {
 class AddContact {
 	
 	MUI mui;
+        
 	public AddContact() {
 	}
 
 	public void add() {
 
+            
 		mui = MUI.getInstance();
 		mui.setDFlag(true);
 		JList jlist1 = mui.getJList1();
 		
-		ArrayList<ArrayList<Acquaintances>> a = mui.getA();
+		ContactManagementComponent a = mui.getA();
 		int x = jlist1.getSelectedIndex();
 		int num = mui.getNum();
 		boolean flag = mui.getFlag();
@@ -49,6 +51,9 @@ class AddContact {
 		JTextArea one = mui.getOne();
 		JTextArea two = mui.getTwo();
 		JTextArea three = mui.getThree();
+                
+                validDateChecker vdc = new validDateChecker();
+                validMobileNo vmn = new validMobileNo();
 		
 		String Name = name.getText();
 		if(Name.isEmpty()){
@@ -57,7 +62,7 @@ class AddContact {
 		}
 		
 		String Mobile = mobile.getText();
-		if(!MobileNoChecker(Mobile)){
+		if(!vmn.checkValid(Mobile)){
 			JOptionPane.showMessageDialog(mui, "Enter a valid mobile number (6-15 digits)");
 			return;
 		}
@@ -83,7 +88,7 @@ class AddContact {
 				return;
 			}
 			Three = three.getText();
-			if(!validDate(Three)){
+			if(!vdc.isValid(Three)) {
 				return;
 			}
 			if(Three.isEmpty() || Three.length() > 300){
@@ -113,7 +118,7 @@ class AddContact {
 				JOptionPane.showMessageDialog(mui, "Enter a valid value ( 1 to 300 chars)");
 				return;
 			}
-			if(!validDate(One)){
+			if(!vdc.isValid(One)){
 				return;
 			}
 			Two = two.getText();
@@ -121,7 +126,7 @@ class AddContact {
 				JOptionPane.showMessageDialog(mui, "Enter a valid value ( 1 to 300 chars)");
 				return;
 			}
-			if(!validDate(Two)){
+			if(!vdc.isValid(Two)){
 				return;
 			}
 			Relatives rel;
@@ -194,7 +199,8 @@ class AddContact {
 		
 	}
 
-	public boolean validDate(String Date){
+        /*
+	public boolean vdc.checkValid(String Date){
 
 		mui = MUI.getInstance();
 
@@ -221,7 +227,7 @@ class AddContact {
 				return false;    
 		}
 		return true;
-	}
+	}*/
 
 }
 

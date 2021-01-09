@@ -59,4 +59,56 @@ public class Relatives extends Acquaintances implements Serializable{
     public void setLDate(String LDate) {
         this.LDate = LDate;
     }
+    
+    public String printSearchResult(){
+        String s = "";
+        s = s.concat(super.printSearchResult());
+        s = s.concat("Relatives Birthday: " + getBDate() + "<br>");
+        s = s.concat("Last met date: " + getLDate() + "<br>");
+
+        return s;
+    }
+    
+    public String matchName(String str){
+        String s = "";
+        if (getName().matches(str)){
+            s = s.concat(printSearchResult());
+        }
+        
+        return s;
+    }
+    
+    
+    /*
+    //ditambah
+    @Override
+    public boolean hasOne() {
+        return true;
+    }
+    
+    @Override
+    public void setOne(String one) {
+        setBDate(one);
+    }
+    
+    @Override
+    public boolean hasTwo() {
+        return true;
+    }
+    
+    @Override
+    public void setTwo(String two) {
+        setLDate(two);
+    }
+    
+    @Override
+    public boolean hasThree() {
+        return false;
+    }
+    
+    @Override
+    public void setThree(String three) {
+        System.out.println("Not implemented");
+    } 
+    //end tambah */
 }

@@ -29,7 +29,7 @@ class ReadFromFile {
 	
 	public void readFromFile() {
 		mui = MUI.getInstance();
-		ArrayList<ArrayList<Acquaintances>> temp;
+		ContactManagementComponent temp;
 
 		JFileChooser fileChooser = new JFileChooser();
 		fileChooser.setCurrentDirectory(new File(System.getProperty("user.dir")));
@@ -38,7 +38,7 @@ class ReadFromFile {
 			File selectedFile = fileChooser.getSelectedFile();
 			System.out.println("Selected file: "+selectedFile.getName());
 			try {
-				temp = (ArrayList<ArrayList<Acquaintances>>)SerializationUtil.deserialize(selectedFile);
+				temp = (ContactManagementComponent)SerializationUtil.deserialize(selectedFile);
 			}
 			catch (ClassNotFoundException | IOException ex) {
 				JOptionPane.showMessageDialog(mui, "Error");

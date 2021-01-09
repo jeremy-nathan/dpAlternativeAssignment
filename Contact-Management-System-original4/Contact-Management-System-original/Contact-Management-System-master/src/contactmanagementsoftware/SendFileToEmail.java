@@ -5,14 +5,14 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.Properties;
 
-import javax.mail.BodyPart;
+/*import javax.mail.BodyPart;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Multipart;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
-import javax.mail.internet.*;
+import javax.mail.internet.*;*/
 
 public class SendFileToEmail {
 
@@ -25,7 +25,7 @@ public class SendFileToEmail {
 		this.attachment = attachment;
 	}
 
-	public void sendEmail() {
+	/*public void sendEmail() {
 		System.out.println("Email Service Start...");
 
 		//use gmail account only because I use gmail smtp.
@@ -90,5 +90,5 @@ public class SendFileToEmail {
 		}
 		catch (MessagingException mex) {mex.printStackTrace();} 
 		catch (IOException e) {e.printStackTrace();}  
-	}
+	} */
 }

@@ -55,4 +55,55 @@ public class ProfessionalFriends extends Acquaintances implements Serializable{
             setCommonInterests(reader.nextLine());
         }
     }
+    
+    
+    public String printSearchResult(){
+        String s = "";
+        s = s.concat(super.printSearchResult());
+        s = s.concat("Common Interests: " + getCommonInterests() + "<br><br>");
+
+        return s;
+    }
+    
+    public String matchName(String str){
+        String s = "";
+        if (getName().matches(str)){
+            s = s.concat(printSearchResult());
+        }
+        
+        return s;
+    }
+    
+    /*
+     //ditambah
+    @Override
+    public boolean hasOne() {
+        return true;
+    }
+    
+    @Override
+    public void setOne(String one) {
+        setCommonInterests(one);
+    }
+    
+    @Override
+    public boolean hasTwo() {
+        return false;
+    }
+    
+    @Override
+    public void setTwo(String two) {
+        System.out.println("Not implemented");
+    }
+    
+    @Override
+    public boolean hasThree() {
+        return false;
+    }
+    
+    @Override
+    public void setThree(String three) {
+        System.out.println("Not implemented");
+    } 
+    //end tambah */
 }
