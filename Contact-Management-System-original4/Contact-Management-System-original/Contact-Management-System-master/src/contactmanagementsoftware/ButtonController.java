@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 public class ButtonController implements ActionListener {
 
@@ -72,6 +73,11 @@ public class ButtonController implements ActionListener {
 		else if(e.getSource() == mui.getjButton11()) {
 			Cancel cancel = new Cancel();
 			command = new CancelCommand(cancel);
+		}
+		
+		else if(e.getSource() == mui.getjButton12()) {
+			SendFileToEmailReceiver sendFile = new SendFileToEmailReceiver();
+			command = new SendFileToEmailCommand(sendFile);
 		}
 
 		invoker.setCommand(command);

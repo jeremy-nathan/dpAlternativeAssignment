@@ -45,7 +45,5 @@ public class ContactManagementSoftware implements Serializable{
      mg.setA(contactsMainDirectory);
      mg.setVisible(true);
         
-        
-        
     }
 }
